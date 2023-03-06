@@ -9,6 +9,8 @@ and maintain connections.
 import os.path
 import socket  # noqa: F401
 
+import something
+
 from urllib3.exceptions import ClosedPoolError, ConnectTimeoutError
 from urllib3.exceptions import HTTPError as _HTTPError
 from urllib3.exceptions import InvalidHeader as _InvalidHeader
@@ -236,6 +238,14 @@ class HTTPAdapter(BaseAdapter):
 
         return manager
 
+    some_list = [
+        "max_retries",
+        "config",
+        "_pool_connections",
+        "_pool_maxsize",
+        "_pool_block",
+    ]
+    
     def cert_verify(self, conn, url, verify, cert):
         """Verify a SSL certificate. This method should not be called from user
         code, and is only exposed for use when subclassing the
