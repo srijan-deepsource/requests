@@ -9,6 +9,8 @@ and maintain connections.
 import os.path
 import socket  # noqa: F401
 
+import something
+
 from urllib3.exceptions import ClosedPoolError, ConnectTimeoutError
 from urllib3.exceptions import HTTPError as _HTTPError
 from urllib3.exceptions import InvalidHeader as _InvalidHeader
