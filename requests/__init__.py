@@ -143,8 +143,6 @@ warnings.simplefilter("ignore", DependencyWarning)
 # Set default logging handler to avoid "No handler found" warnings.
 import logging
 from logging import NullHandler
-
-from . import packages, utils
 from .__version__ import (
     __author__,
     __author_email__,
@@ -157,22 +155,10 @@ from .__version__ import (
     __url__,
     __version__,
 )
-from .api import delete, get, head, options, patch, post, put, request
+from .api import patch
 from .exceptions import (
-    ConnectionError,
-    ConnectTimeout,
     FileModeWarning,
-    HTTPError,
-    JSONDecodeError,
-    ReadTimeout,
-    RequestException,
-    Timeout,
-    TooManyRedirects,
-    URLRequired,
-)
-from .models import PreparedRequest, Request, Response
-from .sessions import Session, session
-from .status_codes import codes
+    )
 
 logging.getLogger(__name__).addHandler(NullHandler())
 
